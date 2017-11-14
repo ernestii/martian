@@ -21,14 +21,25 @@ section {
   padding: 200px 0;
 }
 
-// Sections
-section {
-  
+
+.navbar {
+  font-weight: 400;
+  box-shadow: 0 0 50px 0 rgba(76, 36, 122, 0.05);
+
+  a.navbar-brand {
+    opacity: .3;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+  }
 }
+
 
 p {
   margin: 1em 0;
 }
+
+
+// Sections
 
 // Reviews
 .review {
@@ -43,6 +54,7 @@ p {
 
 #cover {
   background-color: #FBFCFE;
+  padding-top: 150px;
   margin-bottom: 250px;
 
   .title {
@@ -78,11 +90,21 @@ p {
 }
 
 #synapsis {
+  padding: 300px 0;
   background-color: #000;
+  background-image: url(../images/cosmonaut.jpg), url(../images/mars.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 264px, 100%;
+  background-position: 5% 10%, bottom center;
   color: #fff;
+
+  font-size: 20px;
+  line-height: 2;
 
   h2 {
     color: #E7A750;
+    line-height: 1.5;
+    margin-bottom: 2em; 
   }
 }
 
@@ -112,18 +134,30 @@ p {
 
 
 #surviving {
+  padding: 0;
+
   .heading {
-    background: #E7A750;
+    background-color: #E7A750;
+    background-image: url(../images/astronaut.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
     color: #fff;
     padding-top: 180px;
     text-align: center;
+
+    h1 {
+      color: #000;
+      margin-bottom: 1em;
+      font-weight: 600;
+      font-size: 50px;
+    }
   }
 
   .nav-tabs {
     justify-content: center;
     border-bottom: 0;
     padding-top: 100px;
-
+    
     .nav-link {
       font-size: 2em;
       font-weight: 500;
@@ -156,9 +190,14 @@ p {
     background: #000;
     color: #fff;
 
+    img {
+      max-width: 60px;
+    }
+
     h2 {
       color: #E7A750;
       margin-bottom: 1em;
+      margin-top: .25em;
     }
     p {
       opacity: .6;

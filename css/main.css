@@ -15,6 +15,14 @@ cite {
 section {
   padding: 200px 0; }
 
+.navbar {
+  font-weight: 400;
+  box-shadow: 0 0 50px 0 rgba(76, 36, 122, 0.05); }
+  .navbar a.navbar-brand {
+    opacity: .3;
+    text-transform: uppercase;
+    letter-spacing: .2em; }
+
 p {
   margin: 1em 0; }
 
@@ -25,6 +33,7 @@ p {
 
 #cover {
   background-color: #FBFCFE;
+  padding-top: 150px;
   margin-bottom: 250px; }
   #cover .title {
     text-align: center;
@@ -48,10 +57,19 @@ p {
       margin-bottom: 3em; }
 
 #synapsis {
+  padding: 300px 0;
   background-color: #000;
-  color: #fff; }
+  background-image: url(../images/cosmonaut.jpg), url(../images/mars.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 264px, 100%;
+  background-position: 5% 10%, bottom center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 2; }
   #synapsis h2 {
-    color: #E7A750; }
+    color: #E7A750;
+    line-height: 1.5;
+    margin-bottom: 2em; }
 
 #author figure {
   max-width: 60%;
@@ -65,42 +83,55 @@ p {
 #author article {
   font-size: 24px; }
 
-#surviving .heading {
-  background: #E7A750;
-  color: #fff;
-  padding-top: 180px;
-  text-align: center; }
-#surviving .nav-tabs {
-  justify-content: center;
-  border-bottom: 0;
-  padding-top: 100px; }
-  #surviving .nav-tabs .nav-link {
-    font-size: 2em;
-    font-weight: 500;
-    padding-left: 30px;
-    padding-right: 30px;
+#surviving {
+  padding: 0; }
+  #surviving .heading {
+    background-color: #E7A750;
+    background-image: url(../images/astronaut.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
     color: #fff;
-    border: 0; }
-    #surviving .nav-tabs .nav-link.active {
+    padding-top: 180px;
+    text-align: center; }
+    #surviving .heading h1 {
+      color: #000;
+      margin-bottom: 1em;
+      font-weight: 600;
+      font-size: 50px; }
+  #surviving .nav-tabs {
+    justify-content: center;
+    border-bottom: 0;
+    padding-top: 100px; }
+    #surviving .nav-tabs .nav-link {
+      font-size: 2em;
+      font-weight: 500;
+      padding-left: 30px;
+      padding-right: 30px;
       color: #fff;
-      background: #000;
       border: 0; }
-      #surviving .nav-tabs .nav-link.active:hover {
-        background: #000; }
-    #surviving .nav-tabs .nav-link:hover {
-      border: 0;
-      background-color: rgba(0, 0, 0, 0.1); }
-#surviving .tab-content {
-  background: #000; }
-#surviving .surviving-content {
-  background: #000;
-  color: #fff;
-  padding: 200px 0; }
-  #surviving .surviving-content h2 {
-    color: #E7A750;
-    margin-bottom: 1em; }
-  #surviving .surviving-content p {
-    opacity: .6; }
+      #surviving .nav-tabs .nav-link.active {
+        color: #fff;
+        background: #000;
+        border: 0; }
+        #surviving .nav-tabs .nav-link.active:hover {
+          background: #000; }
+      #surviving .nav-tabs .nav-link:hover {
+        border: 0;
+        background-color: rgba(0, 0, 0, 0.1); }
+  #surviving .tab-content {
+    background: #000; }
+  #surviving .surviving-content {
+    background: #000;
+    color: #fff;
+    padding: 200px 0; }
+    #surviving .surviving-content img {
+      max-width: 60px; }
+    #surviving .surviving-content h2 {
+      color: #E7A750;
+      margin-bottom: 1em;
+      margin-top: .25em; }
+    #surviving .surviving-content p {
+      opacity: .6; }
 
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }

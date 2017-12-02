@@ -13,7 +13,16 @@ cite {
   font-style: normal; }
 
 section {
-  padding: 200px 0; }
+  padding: 10em 0; }
+
+figure {
+  margin: 0; }
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
 
 .navbar {
   font-weight: 400;
@@ -26,6 +35,9 @@ section {
 p {
   margin: 1em 0; }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px; } }
 .review cite {
   font-weight: 500; }
   .review cite:before {
@@ -46,7 +58,7 @@ p {
       font-weight: 300;
       font-style: normal; }
     #cover .title h1 {
-      font-size: 120px;
+      font-size: 6.66em;
       font-weight: bold; }
   #cover figure {
     margin-bottom: -400px;
@@ -57,15 +69,19 @@ p {
       margin-bottom: 3em; }
 
 #synapsis {
-  padding: 300px 0;
+  padding: 10em 0;
   background-color: #000;
   background-image: url(../images/cosmonaut.jpg), url(../images/mars.jpg);
   background-repeat: no-repeat, no-repeat;
   background-size: 264px, 100%;
   background-position: 5% 10%, bottom center;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.1em;
   line-height: 2; }
+  @media screen and (max-width: 700px) {
+    #synapsis {
+      background-size: 0, 100%;
+      padding-top: 5em; } }
   #synapsis h2 {
     color: #E7A750;
     line-height: 1.5;
@@ -81,7 +97,7 @@ p {
     margin-top: 1em;
     opacity: .6; }
 #author article {
-  font-size: 24px; }
+  font-size: 1.3333em; }
 
 #surviving {
   padding: 0; }
@@ -125,7 +141,7 @@ p {
     color: #fff;
     padding: 200px 0; }
     #surviving .surviving-content img {
-      max-width: 60px; }
+      max-width: 50px; }
     #surviving .surviving-content h2 {
       color: #E7A750;
       margin-bottom: 1em;
@@ -133,10 +149,55 @@ p {
     #surviving .surviving-content p {
       opacity: .6; }
 
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+#buynow {
+  background: #FBFCFE;
+  text-align: center;
+  padding: 5em 0; }
+  #buynow figure {
+    text-align: center;
+    margin-bottom: 2em; }
+    #buynow figure img {
+      max-width: 80%;
+      box-shadow: 0 5px 50px 0 rgba(183, 61, 40, 0.45);
+      border-radius: 4px; }
+    #buynow figure figcaption {
+      margin-top: 1em;
+      opacity: .4; }
+  #buynow .btn small {
+    font-weight: 300; }
+  #buynow .price:before {
+    content: '$';
+    font-size: .7em; }
 
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+#qa {
+  padding: 5em 0; }
+  #qa .card {
+    margin: 1em 0;
+    line-height: 1.6; }
+    #qa .card .card-header {
+      background-color: #FBFCFE;
+      color: inherit;
+      font-weight: 400; }
+      #qa .card .card-header:hover {
+        text-decoration: none; }
+  #qa cite:before {
+    content: '\2014  '; }
+
+#publisher {
+  padding: 5em 0;
+  background: #FBFCFE; }
+  #publisher figure {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em; }
+  #publisher img {
+    mix-blend-mode: darken; }
+
+footer {
+  background: #212529;
+  color: #777;
+  padding: 2em 0;
+  font-size: .9em;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

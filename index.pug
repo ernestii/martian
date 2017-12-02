@@ -21,7 +21,7 @@ html(lang="en")
           li.nav-item: a.nav-link(href="#") Author
           li.nav-item: a.nav-link(href="#") Publisher
         ul.navbar-nav.mr-0
-          li.nav-item: a.btn.btn-warning(href="#") Buy Now
+          li.nav-item: a.btn.btn-warning(href="#buynow") Buy Now
 
     // Cover
     section#cover
@@ -36,7 +36,7 @@ html(lang="en")
               cite Larry Niven
           figure.col-6
             img(src="images/cover.jpg" alt="The Martian")
-            a.btn.btn-warning(href="#buy" role="button") Buy Now
+            a.btn.btn-warning(href="#buynow" role="button") Buy Now
           aside.col-3.align-self-end
             .review
               p A page-turning thriller…this survival tale with a high-tech twist will pull you right in.
@@ -45,41 +45,41 @@ html(lang="en")
     // Reviews
     section#reviews
 
-        #carouselReviews.carousel.slide(data-ride="carousel")
+        #carouselReviews.carousel.slide(data-ride="carousel" data-interval="5000")
           .carousel-inner
             .carousel-item.active: .container
               .row
-                .col-4: .review
+                .col-md-4: .review
                   p <strong>Andy Weir delivers with The Martian... a story for readers who enjoy thrillers</strong>, science fiction, non-fiction, or flat-out adventure [and] an authentic portrayal of the future of space travel.
                   cite Associated Press
-                .col-4: .review
+                .col-md-4: .review
                   p <strong>The best book I've read in ages. Clear your schedule before you crack the seal.</strong> This story will take your breath away faster than a hull breech. Smart, funny, and white-knuckle intense, The Martian is everything you want from a novel.
                   cite Hugh Howey, New York Times
-                .col-4: .review
+                .col-md-4: .review
                   p <strong>The Martian kicked my ass!</strong> Weir has crafted a relentlessly entertaining and inventive survival thriller, a MacGyver-trapped-on-Mars tale that feels just as real and harrowing as the true story of Apollo 13.
                   cite Ernest Cline, New York Times 
                 
             .carousel-item: .container
               .row
-                .col-4
+                .col-md-4
                   .review
                     p <strong>Brilliant…</strong> a celebration of human ingenuity [and] the purest example of real-science sci-fi for many years…Utterly compelling.
                     cite Wall Street Journal
-                .col-4: .review
+                .col-md-4: .review
                   p <strong>Terrific stuff, a crackling good read</strong> that devotees of space travel will devour like candy…succeeds on several levels and for a variety of reasons, not least of which is its surprising plausibility.
                   cite USA Today
-                .col-4: .review
+                .col-md-4: .review
                   p <strong>A gripping tale of survival in space</strong> [that] harkens back to the early days of science fiction by masters such as Robert Heinlein, Isaac Asimov and Arthur C. Clarke.
                   cite San Jose Mercury News
             .carousel-item: .container
               .row
-                .col-4: .review
+                .col-md-4: .review
                   p <strong>The tension simply never lets up, from the first page to the last</strong>, and at no point does the believability falter for even a second. You can't shake the feeling that this could all really happen.
                   cite Patrick Lee, New York Times
-                .col-4: .review
+                .col-md-4: .review
                   p <strong>Strong, resilent, and gutsy. It's Robinson Crusoe on Mars, 21st century style.</strong>  Set aside a chunk of free time when you start this one.  You're going to need it because you won't want to put it down.
                   cite Steve Berry, New York Times
-                .col-4: .review
+                .col-md-4: .review
                   p <strong>Riveting...</strong> a tightly constructed and completely believable story of a man's ingenuity and strength in the face of seemingly insurmountable odds.
                   cite Booklist
           a.carousel-control-prev(href="#carouselReviews" role="button" data-slide="prev"): span.carousel-control-prev-icon
@@ -90,8 +90,7 @@ html(lang="en")
     section#synapsis
       .container
         .row
-          .col-2
-          article.col-8
+          article.col-12.col-md-8.offset-md-2
             h2 Six days ago, astronaut Mark Watney became one of the first people to walk on Mars. 
             p Now, he's sure he'll be the first person to die there.
             p After a dust storm nearly kills him and forces his crew to evacuate while thinking him dead, Mark finds himself stranded and completely alone with no way to even signal Earth that he’s alive—and even if he could get word out, his supplies would be gone long before a rescue could arrive. 
@@ -102,12 +101,12 @@ html(lang="en")
     // About the author
     section#author
       .container
-        .row
-          aside.col-4
+        .row.align-items-center
+          aside.col-12.col-md-4
             figure
               img(src="images/andyweir.jpg" alt="Andy Weir in its natural habitat")
               figcaption Andy Weir
-          article.col-8
+          article.col-12.col-md-8
             p Andy Weir was first hired as a programmer for a national laboratory at age fifteen and has been working as a software engineer ever since. He is also a lifelong space nerd and a devoted hobbyist of subjects like relativistic physics, orbital mechanics, and the history of manned spaceflight. The Martian is his first novel.
 
 
@@ -122,7 +121,7 @@ html(lang="en")
               p So you want to live on Mars. Perhaps it’s the rugged terrain, beautiful scenery, or vast natural landscape that appeals to you. Or maybe you’re just a lunatic who wants to survive in a lifeless barren wasteland. Whatever your reasons, there are a few things you should know:
 
           
-          nav#myTab.nav.nav-tabs(role='tablist')
+          nav#myTab.nav.nav-tabs
             a.nav-item.nav-link.active(data-toggle='tab' href='#surviving-1') 1
             a.nav-item.nav-link(data-toggle='tab' href='#surviving-2') 2
             a.nav-item.nav-link(data-toggle='tab' href='#surviving-3') 3
@@ -195,16 +194,79 @@ html(lang="en")
               p Why go out of your way to risk your life? Do you want to study the planet itself? Start your own civilization? Exploit local resources for profit? Make a base with a big death ray so you can address the UN while wearing an ominous mask and demand ransom? Whatever your goal is, you better have it pretty well defined, and you better really mean it. Because in the end, Mars is a harsh, dangerous place and if something goes wrong you’ll have no hope of rescue. Whatever your reason is, it better be worth it.
 
 
+      // Buy Now
+      section#buynow
+        a(name="buynow")
+        .container: .row: .col-lg-4.offset-lg-4
+          figure
+            img(src="images/cover.jpg" alt="The Martian")
+            figcaption: small The Martian: A Novel
+          form(action="/buy" method="POST")
+            .btn-group(data-toggle="buttons")
+              label.btn.btn-outline-secondary
+                input(type="radio" name="option" id="paperback")
+                | <small>Hardcover</small><br>$29.99
+              label.btn.btn-outline-secondary.active
+                input(type="radio" name="option" id="hardcover" checked)
+                | <small>Paperback</small><br>$19.99
+              label.btn.btn-outline-secondary
+                input(type="radio" name="option" id="ebook")
+                | <small>Audiobook</small><br>$4.99
+            p
+              input.btn.btn-warning.btn-lg(type="submit")
 
-      section
-        .container
-          p Buy now
+      section#qa
+        .container: .row: .col-lg-6.offset-lg-3
+          #accordion
+            .card
+              a.card-header(data-toggle="collapse" href="#faq1") Why does the edition with Matt Damon on the cover cost $2 more?
+              #faq1.collapse(role="tabpanel" data-parent="#accordion")
+                .card-body
+                  p Because Matt Damon.
+                  cite Eric Harris
+            
+            .card
+              a.card-header(data-toggle="collapse" href="#faq2") I absolutely loved this book, and don't often read science fiction so I'm not sure what book to search for. Does anyone have a suggestion for a book to read that gives you similar feelings as "The Martian"?
+              #faq2.collapse(role="tabpanel" data-parent="#accordion")
+                .card-body
+                  p I highly recommend Seveneves, by Neal Stephenson, which deals with spaceflight and has long passages explaining a lot of the science. It's got space, realistic science, humour, and nerdy characters, so I think you'll love it.
+                  cite Jack Brady
+            
+            .card
+              a.card-header(data-toggle="collapse" href="#faq3") I'm on page 24 and getting tired of the technical details... Will the whole book be like this?
+              #faq3.collapse(role="tabpanel" data-parent="#accordion")
+                .card-body
+                  p No, probably half of the book covers Mark's challenges. At some point, the book starts shifting back and forth between Mark and other people. But if you don't like the "how does he solve these problems" part, you won't like the book.
+                  cite Laurie
+            
+            .card
+              a.card-header(data-toggle="collapse" href="#faq4") I'm curious if NASA would ever send people to Mars? If they did, what would we be hoping to learn?
+              #faq4.collapse(role="tabpanel" data-parent="#accordion")
+                .card-body
+                  p Mary Roach has a non-fiction book called Packing for Mars and its all about the various space-programs around the world and preparations they are making to eventually send astronauts there - its kinda quirky, but intriguing
+                  cite Dee
+            
+            .card
+              a.card-header(data-toggle="collapse" href="#faq5") Can anyone please tell me how much swearing is in here? I'm interested in this book, and would like to read it, but I'm a bit hesitant...
+              #faq5.collapse(role="tabpanel" data-parent="#accordion")
+                .card-body
+                  p A LOT of swearing. Lots of f-bombs thrown around. Usually doesn't get worse than the f-bomb, but lots of other lower kinds of swearing too. But probably worth mentioning that characters rarely ever swear at each other.
+                  cite Tushmit
+            
 
-      section
-        .container
-          p Publisher
-          p Broadway Books; Reprint edition (Oct. 28 2014)
+      section#publisher
+        .container: .row.align-items-center
+          
+          figure.publisher-logo.col-12.col-lg-4
+              img(src="images/bdwy.gif" alt="Broadway Books")
+              figcaption: small Published by Broadway Books
+          article.col-12.col-lg-8
+            p Founded in 1996 as part of Bantam Doubleday Dell, Broadway Books today is the paperback imprint for Crown. In addition to paperback reprints, Broadway publishes original titles across several categories such as memoir, current affairs, politics, travel, adventure narrative, and popular fiction.
+            p Our list includes classic books by Bill Bryson, Frances Mayes, Jennifer Finney Boylan, Mitch Albom, Max Brooks, Nujood Ali, John Elder Robison, Lauren Weisberger, and Ed Viesturs, among others.
 
+    footer
+      .container
+        p Designed by Ernest Iliiasov #200336022 for COMP2081 Advanced Web Interface Design @ Georgian College
 
     script(src="js/jquery.min.js")
     script(src="js/popper.min.js")

@@ -24,7 +24,7 @@ html(lang="en")
           li.nav-item: a.btn.btn-warning(href="#buynow") Buy Now
 
     // Cover
-    section#cover
+    #cover
       .container
         .title
           cite Andy Weir
@@ -43,7 +43,7 @@ html(lang="en")
               cite Suspense Magazine
     
     // Reviews
-    section#reviews
+    #reviews
 
         #carouselReviews.carousel.slide(data-ride="carousel" data-interval="5000")
           .carousel-inner
@@ -87,7 +87,7 @@ html(lang="en")
         
 
     // Synapsis
-    section#synapsis
+    #synapsis
       .container
         .row
           article.col-12.col-md-8.offset-md-2
@@ -99,7 +99,7 @@ html(lang="en")
 
 
     // About the author
-    section#author
+    #author
       .container
         .row.align-items-center
           aside.col-12.col-md-4
@@ -111,7 +111,7 @@ html(lang="en")
 
 
     // Tips for surviving
-    section#surviving
+    #surviving
       .heading
         .container
           .row
@@ -195,9 +195,8 @@ html(lang="en")
 
 
       // Buy Now
-      section#buynow
+      #buynow
         .container: .row: .col-lg-4.offset-lg-4
-          h2 Buy Now
           figure
             img(src="images/cover.jpg" alt="The Martian")
             figcaption: small The Martian: A Novel
@@ -215,9 +214,8 @@ html(lang="en")
             p
               input.btn.btn-warning.btn-lg(type="submit")
 
-      section#qa
+      #qa
         .container: .row: .col-lg-6.offset-lg-3
-          h2 FAQ
           #accordion
             .card
               a.card-header(data-toggle="collapse" href="#faq1") Why does the edition with Matt Damon on the cover cost $2 more?
@@ -255,13 +253,12 @@ html(lang="en")
                   cite Tushmit
             
 
-      section#publisher
+      #publisher
         .container: .row.align-items-center
           figure.publisher-logo.col-12.col-lg-4
               img(src="images/bdwy.gif" alt="Broadway Books" width="120px")
               figcaption: small Published by Broadway Books
           article.col-12.col-lg-8
-            h2 Broadway Books
             p Founded in 1996 as part of Bantam Doubleday Dell, Broadway Books today is the paperback imprint for Crown. In addition to paperback reprints, Broadway publishes original titles across several categories such as memoir, current affairs, politics, travel, adventure narrative, and popular fiction.
             p Our list includes classic books by Bill Bryson, Frances Mayes, Jennifer Finney Boylan, Mitch Albom, Max Brooks, Nujood Ali, John Elder Robison, Lauren Weisberger, and Ed Viesturs, among others.
 

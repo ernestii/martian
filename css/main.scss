@@ -1,15 +1,25 @@
+/* Import the webfont */
 @import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i');
 
-#__bs_notify__ {
-  display: none !important;
+/* Repaint the Bootstrap Carousel control buttons */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-// Typography
+
+/* Main styles and typography */
 body {
-  font-family: Chivo;
+  font-family: Chivo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
   line-height: 1.8;
   font-size: 18px;
+}
+
+p {
+  margin: 1em 0;
 }
 
 cite {
@@ -25,14 +35,17 @@ figure {
   margin: 0;
 }
 
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+/* Responsive font size */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 
+/* Elements */
+
+/* Navbar */
 .navbar {
   font-weight: 400;
   box-shadow: 0 0 50px 0 rgba(76, 36, 122, 0.05);
@@ -44,21 +57,10 @@ figure {
   }
 }
 
-p {
-  margin: 1em 0;
-}
 
-// Responsive font size
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-}
+/* Blocks */
 
-
-// Sections
-
-// Reviews
+/* Reviews */
 .review {
   cite {
     font-weight: 500;
@@ -68,7 +70,7 @@ p {
   }
 }
   
-
+/* Top Cover Block */
 #cover {
   background-color: #FBFCFE;
   padding-top: 150px;
@@ -106,6 +108,7 @@ p {
 
 }
 
+/* Synapsis */
 #synapsis {
   padding: 10em 0;
   background-color: #000;
@@ -130,9 +133,8 @@ p {
   }
 }
 
-
+/* About the Author */
 #author {
-
   figure {
     max-width: 60%;
     text-align: center;
@@ -155,7 +157,7 @@ p {
   //
 }
 
-
+/* Survivng Tips */
 #surviving {
   padding: 0;
 
@@ -176,6 +178,7 @@ p {
     }
   }
 
+  /* Restyle the Bootstrap Tabs */
   .nav-tabs {
     justify-content: center;
     border-bottom: 0;
@@ -232,8 +235,7 @@ p {
 
 
 
-
-
+/* Buy Now */
 #buynow {
   background: #FBFCFE;
   text-align: center;
@@ -268,6 +270,7 @@ p {
 }
 
 
+/* FAQ */
 #qa {
   padding: 5em 0;
 
@@ -291,7 +294,7 @@ p {
 }
 
 
-// Publisher
+/* Publisher */
 #publisher {
   padding: 5em 0;
   background: #FBFCFE;
@@ -309,7 +312,7 @@ p {
 }
 
 
-// Footer
+/* Footer */
 footer {
   background: #212529;
   color: #777;

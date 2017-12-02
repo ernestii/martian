@@ -1,12 +1,21 @@
+/* Import the webfont */
 @import url("https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i");
-#__bs_notify__ {
-  display: none !important; }
+/* Repaint the Bootstrap Carousel control buttons */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
 
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+
+/* Main styles and typography */
 body {
-  font-family: Chivo;
+  font-family: Chivo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
   line-height: 1.8;
   font-size: 18px; }
+
+p {
+  margin: 1em 0; }
 
 cite {
   color: #E7A750;
@@ -18,12 +27,12 @@ cite {
 figure {
   margin: 0; }
 
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
-
+/* Responsive font size */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px; } }
+/* Elements */
+/* Navbar */
 .navbar {
   font-weight: 400;
   box-shadow: 0 0 50px 0 rgba(76, 36, 122, 0.05); }
@@ -32,17 +41,14 @@ figure {
     text-transform: uppercase;
     letter-spacing: .2em; }
 
-p {
-  margin: 1em 0; }
-
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 16px; } }
+/* Blocks */
+/* Reviews */
 .review cite {
   font-weight: 500; }
   .review cite:before {
     content: '\2014  '; }
 
+/* Top Cover Block */
 #cover {
   background-color: #FBFCFE;
   padding-top: 150px;
@@ -68,6 +74,7 @@ p {
       max-width: 100%;
       margin-bottom: 3em; }
 
+/* Synapsis */
 #synapsis {
   padding: 10em 0;
   background-color: #000;
@@ -87,6 +94,7 @@ p {
     line-height: 1.5;
     margin-bottom: 2em; }
 
+/* About the Author */
 #author figure {
   max-width: 60%;
   text-align: center; }
@@ -99,8 +107,10 @@ p {
 #author article {
   font-size: 1.3333em; }
 
+/* Survivng Tips */
 #surviving {
-  padding: 0; }
+  padding: 0;
+  /* Restyle the Bootstrap Tabs */ }
   #surviving .heading {
     background-color: #E7A750;
     background-image: url(../images/astronaut.jpg);
@@ -149,6 +159,7 @@ p {
     #surviving .surviving-content p {
       opacity: .6; }
 
+/* Buy Now */
 #buynow {
   background: #FBFCFE;
   text-align: center;
@@ -169,6 +180,7 @@ p {
     content: '$';
     font-size: .7em; }
 
+/* FAQ */
 #qa {
   padding: 5em 0; }
   #qa .card {
@@ -183,6 +195,7 @@ p {
   #qa cite:before {
     content: '\2014  '; }
 
+/* Publisher */
 #publisher {
   padding: 5em 0;
   background: #FBFCFE; }
@@ -194,6 +207,7 @@ p {
     mix-blend-mode: darken;
     width: 120px; }
 
+/* Footer */
 footer {
   background: #212529;
   color: #777;

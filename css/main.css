@@ -191,7 +191,8 @@ p {
     margin-bottom: 1em;
     margin-top: 1em; }
   #publisher img {
-    mix-blend-mode: darken; }
+    mix-blend-mode: darken;
+    width: 120px; }
 
 footer {
   background: #212529;

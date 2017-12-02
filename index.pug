@@ -24,7 +24,7 @@ html(lang="en")
           li.nav-item: a.btn.btn-warning(href="#buynow") Buy Now
 
     // Cover
-    #cover
+    #cover.block
       .container
         .title
           cite Andy Weir
@@ -43,8 +43,7 @@ html(lang="en")
               cite Suspense Magazine
     
     // Reviews
-    #reviews
-
+    #reviews.block
         #carouselReviews.carousel.slide(data-ride="carousel" data-interval="5000")
           .carousel-inner
             .carousel-item.active: .container
@@ -87,7 +86,7 @@ html(lang="en")
         
 
     // Synapsis
-    #synapsis
+    #synapsis.block
       .container
         .row
           article.col-12.col-md-8.offset-md-2
@@ -99,7 +98,7 @@ html(lang="en")
 
 
     // About the author
-    #author
+    #author.block
       .container
         .row.align-items-center
           aside.col-12.col-md-4
@@ -111,7 +110,7 @@ html(lang="en")
 
 
     // Tips for surviving
-    #surviving
+    #surviving.block
       .heading
         .container
           .row
@@ -195,7 +194,7 @@ html(lang="en")
 
 
       // Buy Now
-      #buynow
+      #buynow.block
         .container: .row: .col-lg-4.offset-lg-4
           figure
             img(src="images/cover.jpg" alt="The Martian")
@@ -214,7 +213,7 @@ html(lang="en")
             p
               input.btn.btn-warning.btn-lg(type="submit")
 
-      #qa
+      #qa.block
         .container: .row: .col-lg-6.offset-lg-3
           #accordion
             .card
@@ -253,7 +252,7 @@ html(lang="en")
                   cite Tushmit
             
 
-      #publisher
+      #publisher.block
         .container: .row.align-items-center
           figure.publisher-logo.col-12.col-lg-4
               img(src="images/bdwy.gif" alt="Broadway Books" width="120px")
